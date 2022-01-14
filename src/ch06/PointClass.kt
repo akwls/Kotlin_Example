@@ -1,12 +1,15 @@
 package ch06
 
+import kotlin.math.pow
+import kotlin.math.sqrt
+
 class Point(
     val x: Double,
     val y: Double
     )
 {
     fun calculateDistanceFrom(other: Point) : Double{
-        var distance = Math.sqrt(Math.pow(other.x-x,2.0) + Math.pow(other.y-y,2.0))
+        var distance = sqrt((other.x - x).pow(2.0) + (other.y - y).pow(2.0))
         return distance
     }
     fun move(movePoint: Point) : Point {
